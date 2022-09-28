@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Lightleak from "../components/Lightleak.astro";
+---
+
+<Layout title="Keleher Dot Ca">
+	<main>
+		<h1>Maxwell Keleher</h1>
+
+		<div>
+			<Lightleak title="Portfolio" href="./portfolio" />
+			<Lightleak title="Resume + CV" href="" />
+			<Lightleak title="Photographs" href="./photographs" />
+			<Lightleak title="About" href="">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+				aliquam tortor ut sem eleifend, eu tempor mauris tincidunt.
+				Vivamus non ipsum euismod, gravida turpis a, bibendum felis.
+				Curabitur non ipsum et massa aliquet pharetra vel vitae est.
+				Quisque dapibus placerat orci, a tincidunt turpis imperdiet eu.
+				Suspendisse semper lacinia nulla eu cursus. Nulla semper
+				eleifend dolor id sagittis. Fusce sollicitudin condimentum ante
+				sit amet luctus. Suspendisse a tortor augue. Pellentesque at
+				rhoncus sapien. Morbi suscipit interdum placerat.
+			</Lightleak>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	:root {
+		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+	}
+
+	h1 {
+		margin: 2rem 0;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
+	}
+</style>

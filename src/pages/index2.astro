@@ -1,0 +1,82 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Max Keleher">
+	<main>
+		<h1>Max Keleher</h1>
+		<p class="about-me">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+			aliquam tortor ut sem eleifend, eu tempor mauris tincidunt. Vivamus
+			non ipsum euismod, gravida turpis a, bibendum felis. Curabitur non
+			ipsum et massa aliquet pharetra vel vitae est. Quisque dapibus
+			placerat orci, a tincidunt turpis imperdiet eu. Suspendisse semper
+			lacinia nulla eu cursus. Nulla semper eleifend dolor id sagittis.
+			Fusce sollicitudin condimentum ante sit amet luctus. Suspendisse a
+			tortor augue. Pellentesque at rhoncus sapien. Morbi suscipit
+			interdum placerat. Lorem ipsum dolor sit amet, consectetur
+			adipiscing elit. Proin aliquam tortor ut sem eleifend, eu tempor
+			mauris tincidunt. Vivamus non ipsum euismod, gravida turpis a,
+			bibendum felis. Curabitur non ipsum et massa aliquet pharetra vel
+			vitae est. Quisque dapibus placerat orci, a tincidunt turpis
+			imperdiet eu. Suspendisse semper lacinia nulla eu cursus. Nulla
+			semper eleifend dolor id sagittis. Fusce sollicitudin condimentum
+			ante sit amet luctus. Suspendisse a tortor augue. Pellentesque at
+			rhoncus sapien. Morbi suscipit interdum placerat. Lorem ipsum dolor
+			sit amet, consectetur adipiscing elit. Proin aliquam tortor ut sem
+			eleifend, eu tempor mauris tincidunt. Vivamus non ipsum euismod,
+			gravida turpis a, bibendum felis. Curabitur non ipsum et massa
+			aliquet pharetra vel vitae est. Quisque dapibus placerat orci, a
+			tincidunt turpis imperdiet eu. Suspendisse semper lacinia nulla eu
+			cursus.
+		</p>
+		<ul class="links">
+			<li>
+				<a href="/portfolio">Portfolio</a>
+			</li>
+			<li>
+				<a href="/citations">Citations</a>
+			</li>
+			<li>
+				<a href="/photography">Photography</a>
+			</li>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		font-family: serif;
+		background: var(--black);
+		color: var(--white);
+
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+
+		width: 100vw;
+		height: 100vh;
+		box-sizing: border-box;
+
+		padding: 40px;
+	}
+
+	h1 {
+		font-size: 2.4rem;
+		font-weight: 100;
+		text-transform: uppercase;
+		letter-spacing: 0.02em;
+		margin: 0;
+	}
+
+	p.about-me {
+		font-size: 1.6rem;
+
+		grid-column: 2;
+		grid-row: 1 / 3;
+		margin: 0;
+	}
+
+	ul.links {
+		align-self: baseline;
+	}
+</style>
