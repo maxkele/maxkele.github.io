@@ -28,8 +28,15 @@ const { frontmatter } = Astro.props
 	}
 
 	.exhibit {
-		background-color: #f9efdc;
-		flex-basis: 70%;
+        color: var(--black);
+		background-color: var(--white);
+		flex-basis: 85%;
+        text-align: center;
+        padding: 180px 150px;
+        box-sizing: border-box;
+        max-height: 100vh;
+        overflow-y: scroll;
+        font-size: 1.5rem;
 	}
 
 	.scroller {
@@ -47,11 +54,11 @@ const { frontmatter } = Astro.props
 		transition: box-shadow 0.2s ease;
 
 		background: #000000;
-		box-shadow: inset 0px 4px 10px 20px #f9efdc;
-		border-radius: 38px;
+		box-shadow: inset 0px 0px 10px 12px #f9efdc;
+		border-radius: 8px;
 	}
 
 	a.darkButton:hover {
-		box-shadow: inset 0px 0px 8px 15px #000000 !important;
+		box-shadow: inset 0px 0px 10px 12px #000000 !important;
 	}
 </style>
