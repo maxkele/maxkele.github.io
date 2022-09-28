@@ -27,7 +27,7 @@ const { title } = Astro.props as Props
 				--orange: #fc5c03;
 				--green: #00640c;
 
-				--font: serif; /* TODO: add proper font */
+				--font: 'Signifier', serif;
 				--ease: cubic-bezier(0.17, 0.67, 0.13, 1);
 			}
 
@@ -44,6 +44,24 @@ const { title } = Astro.props as Props
 				-moz-osx-font-smoothing: grayscale;
 				font-feature-settings: "kern" 1;
 				font-kerning: normal;
+			}
+
+			@font-face
+			{
+				src: url('https://fonts.goodbyte.ca/signifier-regular.woff2') format("woff2"),
+					url('https://fonts.goodbyte.ca/signifier-regular.woff') format("woff");
+				font-family: 'Signifier';
+				font-style: normal;
+				font-weight: normal;
+			}
+
+			@font-face
+			{
+				src: url('https://fonts.goodbyte.ca/signifier-regularitalic.woff2') format("woff2"),
+					url('https://fonts.goodbyte.ca/signifier-regularitalic.woff') format("woff");
+				font-family: 'Signifier';
+				font-style: italic;
+				font-weight: normal;
 			}
 		</style>
 	</head>
