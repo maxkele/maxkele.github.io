@@ -1,0 +1,80 @@
+---
+const projects = await Astro.glob('../pages/projects/*.md')
+const newestFirst = (a: any, b: any) => new Date(b.year).valueOf() - new Date(a.year).valueOf()
+---
+
+<ul>
+{
+	projects.sort(newestFirst).map((project) => {
+		return (
+			<li>
+				<a href={project.url}>
+					<h2>{project.frontmatter.title}</h2>
+					<p>{project.frontmatter.authors}</p>
+					<p>{project.frontmatter.year}</p>
+				</a>
+			</li>
+		)
+	})
+}
+</ul>
+
+<style>
+	ul
+	{
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding: 50px 0;
+		box-sizing: border-box;
+		margin: 0;
+
+		background-color: var(--black);
+		list-style: none;
+		max-height: 100vh;
+		overflow-y: scroll;
+	}
+
+	a
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 10px;
+
+		background-color: var(--white);
+		aspect-ratio: 2 / 3;
+		max-width: 70%;
+		margin: auto;
+		padding: 0 5%;
+		box-sizing: border-box;
+
+		text-decoration: none;
+		color: var(--black);
+
+		transition: transform 0.2s var(--ease);
+	}
+
+	a:hover,
+	a:focus
+	{
+		transform: scale(1.05);
+	}
+
+	a h2
+	{
+		margin: 0;
+		margin-bottom: 0.5em;
+		font-size: 1.5em;
+		font-weight: normal;
+	}
+
+	a p
+	{
+		margin: 0;
+		font-size: 1em;
+		font-weight: normal;
+	}
+</style>
