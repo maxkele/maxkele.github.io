@@ -1,0 +1,20 @@
+{
+	"editor.formatOnSave": false,
+	"eslint.validate": ["vue", "javascript", "typescript"],
+	"eslint.packageManager": "npm",
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true,
+	},
+	"files.exclude": {
+		"**/.git": true,
+		".gitignore": true,
+		"**/.DS_Store": true,
+		"package-lock.json": true,
+		"node_modules": true,
+		"dist": true,
+		".vite": true,
+		"tsconfig.json": true,
+		".eslintrc": true,
+		".vscode": true,
+	},
+}
