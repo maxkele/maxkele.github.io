@@ -1,0 +1,54 @@
+---
+import Lightleak from "../components/Lightleak.astro";
+const projects = await Astro.glob("../pages/projects/*.md");
+---
+
+<ul class="scroller">
+    {
+        projects.map((project) => {
+            console.log(project.file);
+            return (
+                <li>
+                    <a class="pageWrapper" href={project.url}>
+                        <h2>{project.frontmatter.title}</h2>
+                        <p>{project.frontmatter.authors}</p>
+                        <p>{project.frontmatter.year}</p>
+                    </a>
+                </li>
+            );
+        })
+    }
+</ul>
+
+<style>
+    .scroller {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        background-color: black;
+        margin: 0;
+        padding: 50px 0;
+        box-sizing: border-box;
+        list-style: none;
+        max-height: 100vh;
+        overflow-y: scroll;
+    }
+
+    .pageWrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        aspect-ratio: 2 / 3;
+        background-color: #f9efdc;
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .pageWrapper > * {
+        margin: 0;
+        padding: ;
+    }
+</style>

@@ -1,4 +1,6 @@
 ---
+import ProjectScroller from "../components/ProjectScroller.astro";
+
 // 1. The frontmatter prop gives access to frontmatter and other data
 const { frontmatter } = Astro.props;
 ---
@@ -13,47 +15,54 @@ const { frontmatter } = Astro.props;
         <title>{frontmatter.title}</title>
     </head>
     <body>
-        <slot />
-        <a class="lightleak rouge" href={frontmatter.file}>Full project</a>
+        <div class="projectGallery">
+            <div class="exhibit">
+                <slot />
+                <a class="darkButton" href={frontmatter.file}>
+                    See full project</a
+                >
+                <h2>{frontmatter.title}</h2>
+                <p>{frontmatter.authors}</p>
+                <p>{frontmatter.year}</p>
+            </div>
+
+            <ProjectScroller class="scroller" />
+        </div>
         <style>
-            .lightleak {
+            body {
+                margin: 0; /* TODO make this a global thing */
+            }
+            .projectGallery {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .exhibit {
+                background-color: #f9efdc;
+                flex-basis: 70%;
+            }
+
+            .scroller {
+            }
+
+            .darkButton {
                 line-height: 1;
                 margin: 1rem 0;
                 padding: 1rem 2rem;
-            }
 
-            a.lightleak {
                 text-decoration: none;
                 color: inherit;
                 display: block;
                 background-size: 100%;
                 transition: box-shadow 0.2s ease;
+
+                background: #000000;
+                box-shadow: inset 0px 4px 10px 20px #f9efdc;
+                border-radius: 38px;
             }
 
-            a.lightleak:hover {
+            a.darkButton:hover {
                 box-shadow: inset 0px 0px 8px 15px #000000 !important;
-            }
-
-            .lightleak.bleu {
-                background: radial-gradient(
-                    66.94% 69.16% at 21.77% 26.4%,
-                    #00f0ff 0%,
-                    #ffffff 0%,
-                    #00f0ff 100%
-                );
-                box-shadow: inset 0px 0px 20px 12px #000000,
-                    inset -15px 10px 40px 5px #1400ff;
-            }
-
-            .lightleak.rouge {
-                background: radial-gradient(
-                    94.36% 115.66% at 63.87% 53.04%,
-                    #ff5732 0%,
-                    #ffffff 0%,
-                    #ff5732 100%
-                );
-                box-shadow: inset 0px 0px 20px 12px #000000,
-                    inset -15px 10px 40px 5px #ff7613;
             }
         </style>
     </body>

@@ -1,0 +1,19 @@
+---
+layout: '../../layouts/project.astro'
+title: 'Eye-Tracking OS'
+origin: 'Course project for CISC 325'
+authors: 'Maxwell Keleher'
+year: '2018'
+file: ''
+---
+Eye-OS is a mock operating system that leverages eye-gazing as a primary interaction method. This proof of concept focuses on video playing as a high-level goal, and explores ways in which video playing’s sub-tasks can be optimized for this new interaction. The three main aspects to the mock-up are a file manager, a video player, and a calibrator. These components enhance the experience of using eye-gazing and, although built within the context of a video player, can be applied to more general eye-gaze-input systems as well.
+
+The core goal of this project is to create a system designed for eye-gazing. Like other uncommon interaction-models (speech input, VR, etc.), eye-tracking has a lot of downsides that have limited its use in the real world. To remedy these problems, we first identified what the main ones were: inaccuracy of tracking, perception & interaction interference, and stress of using a new form of interaction.
+
+Once we developed a prototype, I ran controlled lab studies to evalute the usability of Eye-OS. Overall, it seems that our design model and the users’ models were relatively similar. This was probably due to the amount of time we spent, before we began development, informally asking others what they would want from our project. Our general tasks were more or less aligned with what users thought (gaze at an image for a description, look to the bottom to exit videos, look to the left and right to navigate between pages, etc.). Of course, there were some misunderstandings and differences. Due to the lack of accuracy with the eye tracking, users ran into many skill-based slips, and it was sometimes difficult to recover from an incorrect click on a film since you had to use eye tracking to access the bottom edge of the screen via eye tracking. If we were to redesign, it might be worth investigating the exit of the video through the “Esc” button since some users were accustomed to this action because of its presence in other video platforms like Youtube.
+
+Similarly, there were a couple of aspects to the navigation that were not intuitive to the people using our project. We were building our project as a proof of concept for an entire operating system so we included a screen that would allow users to search for applications. We had an icon for the video file app we built in the “Search Apps” page, but users were confused about what this meant since the first screen they entered on was one of the genre pages. If we redesigned the project, it would be worth using the “Search Apps” page as a landing page to clarify to users where their location in the operating system.
+
+On the topic of getting lost some users found it unclear what genre in which they first landed. It was clear where you were going when you selected the navigation buttons on the side but when you landed in the drama page it was unclear where you were unless you were familiar with the films in that particular category. Again we solved this problem by having the users land in a page that was not one of the genre pages. 
+
+The benefit from our user tests was mostly small changes to help prevent slips. We were hoping to design an operating system for people who were unfamiliar with eye-tracking technology. Given that we all came in without any experience with eye-tracking technology, it was easy to conduct ethnographic studies that resulted in very few differences between our model and user models. The user tests pointed out small issues such as side buttons that were too small and hovers over films not lasting long enough. 

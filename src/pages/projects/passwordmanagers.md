@@ -3,7 +3,7 @@ layout: '../../layouts/project.astro'
 title: 'Password Manager UI Exploration'
 origin: 'Completed as part of HCIN 5200 Software Design and Development'
 authors: 'Maxwell Keleher'
-blurb: ''
+year: '2021'
 file: ''
 ---
 # Title 
