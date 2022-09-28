@@ -9,12 +9,14 @@ const { frontmatter } = Astro.props
 	<div class="projectGallery">
 		<div class="exhibit">
 			<slot/>
-			<a class="darkButton" href={frontmatter.file}>
+			<!-- <a class="darkButton" href={frontmatter.file}>
 				See full project
-			</a>
-			<h2>{frontmatter.title}</h2>
-			<p>{frontmatter.authors}</p>
-			<p>{frontmatter.year}</p>
+			</a> -->
+            <div class="info">
+                <h2>{frontmatter.title}</h2>
+                <p>{frontmatter.authors}</p>
+                <p>{frontmatter.year}</p>
+            </div>
 		</div>
 
 		<ProjectScroller class="scroller" />
@@ -32,12 +34,21 @@ const { frontmatter } = Astro.props
 		background-color: var(--white);
 		flex-basis: 85%;
         text-align: center;
-        padding: 180px 150px;
+        padding: 180px 120px;
         box-sizing: border-box;
         max-height: 100vh;
         overflow-y: scroll;
         font-size: 1.5rem;
 	}
+
+    .info > p {
+        margin: 0;
+    }
+
+    .info > h2 {
+        margin: 100px 0 10px 0;
+        font-size: 1.8rem;
+    }
 
 	.scroller {
 	}
