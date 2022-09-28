@@ -1,16 +1,12 @@
 ---
-// 1. The frontmatter prop gives access to frontmatter and other data
-const { frontmatter } = Astro.props;
+import Base from "./Base.astro"
+
+const { frontmatter } = Astro.props
 ---
 
-<html>
-    <head>
-        <title>{frontmatter.title}</title>
-    </head>
-    <body>
-        <h1>
-            {frontmatter.title} on {frontmatter.camera} with {frontmatter.lens}
-        </h1>
-        <slot />
-    </body>
-</html>
+<Base title={frontmatter.title}>
+	<h1>
+		{frontmatter.title} on {frontmatter.camera} with {frontmatter.lens}
+	</h1>
+    <slot/>
+</Base>

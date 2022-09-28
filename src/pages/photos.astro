@@ -1,5 +1,5 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Base.astro";
 
 const photographs = await Astro.glob("./photos/*.md");
 
@@ -12,27 +12,27 @@ const photographs = await Astro.glob("./photos/*.md");
 ---
 
 <Layout title="Keleher Dot Ca">
-    <main>
-        <h1>Maxwell Test</h1>
+	<main>
+		<h1>Maxwell Test</h1>
 
-        <div>
-            {
-                photographs.map((photo) => {
-                    console.log(photo.file);
-                    return (
-                        //Photo
-                        <a href={photo.url}>
-                            <img alt="" src={photo.frontmatter.file} />
-                        </a>
-                    );
-                })
-            }
-        </div>
-    </main>
+		<div>
+			{
+				photographs.map((photo) => {
+					console.log(photo.file);
+					return (
+						//Photo
+						<a href={photo.url}>
+							<img alt="" src={photo.frontmatter.file} />
+						</a>
+					);
+				})
+			}
+		</div>
+	</main>
 </Layout>
 
 <style>
-    div {
-        column-count: 3;
-    }
+	div {
+		column-count: 3;
+	}
 </style>

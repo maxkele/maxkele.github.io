@@ -1,69 +1,57 @@
 ---
-import ProjectScroller from "../components/ProjectScroller.astro";
+import Base from './Base.astro'
+import ProjectScroller from '../components/ProjectScroller.astro'
 
-// 1. The frontmatter prop gives access to frontmatter and other data
-const { frontmatter } = Astro.props;
+const { frontmatter } = Astro.props
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-        <meta name="generator" content={Astro.generator} />
-        <title>{frontmatter.title}</title>
-    </head>
-    <body>
-        <div class="projectGallery">
-            <div class="exhibit">
-                <slot />
-                <a class="darkButton" href={frontmatter.file}>
-                    See full project</a
-                >
-                <h2>{frontmatter.title}</h2>
-                <p>{frontmatter.authors}</p>
-                <p>{frontmatter.year}</p>
-            </div>
+<Base title={frontmatter.title}>
+	<div class="projectGallery">
+		<div class="exhibit">
+			<slot/>
+			<a class="darkButton" href={frontmatter.file}>
+				See full project
+			</a>
+			<h2>{frontmatter.title}</h2>
+			<p>{frontmatter.authors}</p>
+			<p>{frontmatter.year}</p>
+		</div>
 
-            <ProjectScroller class="scroller" />
-        </div>
-        <style>
-            body {
-                margin: 0; /* TODO make this a global thing */
-            }
-            .projectGallery {
-                display: flex;
-                flex-direction: row;
-            }
+		<ProjectScroller class="scroller" />
+	</div>
+</Base>
 
-            .exhibit {
-                background-color: #f9efdc;
-                flex-basis: 70%;
-            }
+<style>
+	.projectGallery {
+		display: flex;
+		flex-direction: row;
+	}
 
-            .scroller {
-            }
+	.exhibit {
+		background-color: #f9efdc;
+		flex-basis: 70%;
+	}
 
-            .darkButton {
-                line-height: 1;
-                margin: 1rem 0;
-                padding: 1rem 2rem;
+	.scroller {
+	}
 
-                text-decoration: none;
-                color: inherit;
-                display: block;
-                background-size: 100%;
-                transition: box-shadow 0.2s ease;
+	.darkButton {
+		line-height: 1;
+		margin: 1rem 0;
+		padding: 1rem 2rem;
 
-                background: #000000;
-                box-shadow: inset 0px 4px 10px 20px #f9efdc;
-                border-radius: 38px;
-            }
+		text-decoration: none;
+		color: inherit;
+		display: block;
+		background-size: 100%;
+		transition: box-shadow 0.2s ease;
 
-            a.darkButton:hover {
-                box-shadow: inset 0px 0px 8px 15px #000000 !important;
-            }
-        </style>
-    </body>
-</html>
+		background: #000000;
+		box-shadow: inset 0px 4px 10px 20px #f9efdc;
+		border-radius: 38px;
+	}
+
+	a.darkButton:hover {
+		box-shadow: inset 0px 0px 8px 15px #000000 !important;
+	}
+</style>

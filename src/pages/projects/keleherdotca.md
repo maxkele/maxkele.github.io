@@ -1,9 +1,9 @@
 ---
-layout: '../../layouts/project.astro'
-title: 'Keleher Dot Ca Usability Study'
-origin: 'Personal Interst'
-authors: 'Maxwell Keleher'
-year: '2022'
+layout: '../../layouts/Project.astro'
+title: Keleher Dot Ca Usability Study
+origin: Personal Interest
+authors: Maxwell Keleher
+year: 2022
 file: ''
 ---
 

@@ -1,30 +1,30 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../layouts/Base.astro";
 import Lightleak from "../components/Lightleak.astro";
 import Project from "../layouts/Project.astro";
 const projects = await Astro.glob("./projects/*.md");
 ---
 
 <Layout title="Keleher Dot Ca">
-    <main>
-        <h1>Maxwell Test</h1>
+	<main>
+		<h1>Maxwell Test</h1>
 
-        <!-- <Project /> -->
+		<!-- <Project /> -->
 
-        <div>
-            {
-                projects.map((project) => {
-                    console.log(project.file);
-                    return (
-                        <Lightleak
-                            title={project.frontmatter.title}
-                            href={project.url as string}
-                        />
-                    );
-                })
-            }
-        </div>
-    </main>
+		<div>
+			{
+				projects.map((project) => {
+					console.log(project.file);
+					return (
+						<Lightleak
+							title={project.frontmatter.title}
+							href={project.url as string}
+						/>
+					);
+				})
+			}
+		</div>
+	</main>
 </Layout>
 
 <style>
