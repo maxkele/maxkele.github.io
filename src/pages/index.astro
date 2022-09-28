@@ -1,9 +1,8 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Lightleak from "../components/Lightleak.astro";
+import Base from '../layouts/Base.astro'
 ---
 
-<Layout title="Keleher Dot Ca">
+<Base>
 	<main>
 		<h1>Maxwell Keleher</h1>
 
@@ -24,20 +23,4 @@ import Lightleak from "../components/Lightleak.astro";
 			</Lightleak>
 		</div>
 	</main>
-</Layout>
-
-<style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-	}
-
-	h1 {
-		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
-	}
-</style>
+</Base>
