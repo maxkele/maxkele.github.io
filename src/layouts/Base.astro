@@ -1,0 +1,53 @@
+---
+export interface Props {
+	title?: string
+}
+
+const { title } = Astro.props as Props
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width"/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+		<title>
+		{
+			(title != undefined)
+				? `${title} | keleher dot ca`
+				: 'keleher dot ca'
+		}
+		</title>
+		<style is:global>
+			:root
+			{
+				--black: #000;
+				--white: #e6e1d6;
+				--orange: #fc5c03;
+				--green: #00640c;
+
+				--font: serif; /* TODO: add proper font */
+				--ease: cubic-bezier(0.17, 0.67, 0.13, 1);
+			}
+
+			html, body
+			{
+				color: var(--white);
+				background-color: var(--black);
+				margin: 0;
+
+				font-family: var(--font);
+				font-size: 16px;
+				text-rendering: optimizeLegibility;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
+				font-feature-settings: "kern" 1;
+				font-kerning: normal;
+			}
+		</style>
+	</head>
+	<body>
+		<slot/>
+	</body>
+</html>
