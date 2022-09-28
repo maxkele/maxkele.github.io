@@ -16,5 +16,6 @@
 		"tsconfig.json": true,
 		".eslintrc": true,
 		".vscode": true,
+		"postcss.config.cjs": true,
 	},
 }

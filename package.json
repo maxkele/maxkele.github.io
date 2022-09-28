@@ -11,6 +11,7 @@
 		"astro": "^1.3.0"
 	},
 	"devDependencies": {
+		"autoprefixer": "^10.4.12",
 		"eslint-config-goodbyte-styleguide-typescript": "^0.0.4"
 	}
 }
