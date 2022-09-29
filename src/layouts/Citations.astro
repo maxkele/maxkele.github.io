@@ -1,15 +1,31 @@
 ---
 import Base from './Base.astro'
-
+import HomeLogo from '../components/HomeLogo.astro';
 ---
 
 <Base title="Citations">
+	<div class="wordmark">
+		<HomeLogo/>
+	</div>
+	
 	<main>
+		
 		<slot/>
 	</main>
 </Base>
 
 <style>
+	.wordmark {
+        position: absolute;
+        top: 40px; 
+        left: 40px;
+
+        font-weight: 100;
+        font-size: 2rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+
 	main
 	{
 		font-size: 2rem;

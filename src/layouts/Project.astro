@@ -1,29 +1,45 @@
 ---
 import Base from './Base.astro'
 import Gallery from '../components/Gallery.astro'
-
+import HomeLogo from '../components/HomeLogo.astro';
 const { frontmatter } = Astro.props
 ---
 
 <Base title={frontmatter.title}>
 	<div class="projectGallery">
-		<div class="exhibit">
-			<slot/>
-			<!-- <a class="darkButton" href={frontmatter.file}>
-				See full project
-			</a> -->
-            <div class="info">
-                <h2>{frontmatter.title}</h2>
-                <p>{frontmatter.authors}</p>
-                <p>{frontmatter.year}</p>
+        <!-- <div> -->
+            <!-- <HomeLogo/> -->
+            <div class="exhibit">
+                <div class="wordmark"><HomeLogo/></div>
+
+                <slot/>
+                <!-- <a class="darkButton" href={frontmatter.file}>
+                    See full project
+                </a> -->
+                <div class="info">
+                    <h2>{frontmatter.title}</h2>
+                    <p>{frontmatter.authors}</p>
+                    <p>{frontmatter.year}</p>
+                </div>
             </div>
-		</div>
+        <!-- </div> -->
 
 		<Gallery class="scroller" />
 	</div>
 </Base>
 
 <style>
+    .wordmark {
+        position: absolute;
+        top: 40px; 
+        left: 40px;
+
+        font-weight: 100;
+        font-size: 2rem;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+
 	.projectGallery {
 		/* display: flex;
 		flex-direction: row; */
