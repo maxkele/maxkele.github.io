@@ -1,32 +1,10 @@
 ---
-import Layout from "../layouts/Base.astro";
-import Lightleak from "../components/Lightleak.astro";
-import Project from "../layouts/Project.astro";
-const projects = await Astro.glob("./projects/*.md");
+import Project from '../layouts/Project.astro'
+
+const projects = await Astro.glob('../pages/projects/*.md')
+const newestFirst = (a: any, b: any) => new Date(b.year).valueOf() - new Date(a.year).valueOf()
+
+const latestProject = projects.sort(newestFirst)[0]
 ---
 
-<Layout title="Keleher Dot Ca">
-	<main>
-		<h1>Maxwell Test</h1>
-
-		<!-- <Project /> -->
-
-		<div>
-			{
-				projects.map((project) => {
-					console.log(project.file);
-					return (
-						<Lightleak
-							title={project.frontmatter.title}
-							href={project.url as string}
-						/>
-					);
-				})
-			}
-		</div>
-	</main>
-</Layout>
-
-<style>
-
-</style>
+<Project frontmatter={latestProject} set:html={latestProject.compiledContent()}/>
