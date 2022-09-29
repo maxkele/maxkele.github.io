@@ -1,4 +1,4 @@
 import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
-export default defineConfig({ site: 'https://keleher.ca' })
+export default defineConfig({ site: 'https://maxkele.github.io' })
