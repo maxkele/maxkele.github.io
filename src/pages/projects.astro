@@ -7,4 +7,7 @@ const newestFirst = (a: any, b: any) => new Date(b.year).valueOf() - new Date(a.
 const latestProject = projects.sort(newestFirst)[0]
 ---
 
-<Project frontmatter={latestProject} set:html={latestProject.compiledContent()}/>
+<Project
+	frontmatter={latestProject.frontmatter}
+	set:html={latestProject.compiledContent()}
+/>
