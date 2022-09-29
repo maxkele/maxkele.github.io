@@ -1,5 +1,5 @@
 ---
-layout: '../../layouts/project.astro'
+layout: '../../layouts/Project.astro'
 title: 'Golden Boy Usability Analysis'
 origin: 'Goodbyte Research Project'
 authors: 'Maxwell Keleher'
