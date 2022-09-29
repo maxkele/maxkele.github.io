@@ -16,9 +16,9 @@
 		"bun.lockb": true,
 		"tsconfig.json": true,
 		"postcss.config.cjs": true,
-		"astro.config.mjs": true,
+		// "astro.config.mjs": true,
 		".eslintrc": true,
-		".vscode": true,
+		// ".vscode": true,
 		".github": true,
 	},
 }
