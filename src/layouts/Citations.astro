@@ -23,7 +23,7 @@ import Base from './Base.astro'
 		background-repeat: no-repeat;
 
 		animation: beam-intro 2s var(--ease) 1,
-			text-intro 2s ease 1s 1 forwards;
+			text-intro 2s ease 0.5s 1 forwards;
 		color: transparent;
 	}
 
@@ -35,7 +35,11 @@ import Base from './Base.astro'
 
 	@keyframes beam-intro
 	{
-		from { background-position: right; }
+		from
+		{
+			background-position: 80%;
+			opacity: 0;
+		}
 	}
 
 	@keyframes text-intro
