@@ -1,0 +1,65 @@
+---
+import Base from './Base.astro'
+
+---
+
+<Base title="Citations">
+	<main>
+		<slot/>
+	</main>
+</Base>
+
+<style>
+	main
+	{
+		font-size: 2rem;
+		padding: 40px 40px 40px 50%;
+		box-sizing: border-box;
+		min-height: 100vh;
+
+		background: linear-gradient(90deg, transparent, var(--green), transparent);
+		background-position: center;
+		background-size: 100px 100%;
+		background-repeat: no-repeat;
+
+		animation: beam-intro 2s var(--ease) 1,
+			text-intro 2s ease 1s 1 forwards;
+		color: transparent;
+	}
+
+	main :global(ul)
+	{
+		list-style: none;
+		padding-left: 80px;
+	}
+
+	@keyframes beam-intro
+	{
+		from { background-position: right; }
+	}
+
+	@keyframes text-intro
+	{
+		from { color: transparent; }
+		to { color: var(--white); }
+	}
+
+	@media (max-width: 1000px)
+	{
+		main
+		{
+			font-size: 1.5rem;
+			padding-left: 30%;
+			background-position: 30%;
+		}
+	}
+
+	@media (max-width: 600px)
+	{
+		main
+		{
+			padding-left: 5%;
+			background-position: 0%;
+		}
+	}
+</style>
