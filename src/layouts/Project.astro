@@ -30,16 +30,29 @@ const { frontmatter } = Astro.props
 	}
 
 	.exhibit {
-        color: var(--black);
-		background-color: var(--white);
-		flex-basis: 85%;
+        flex-basis: 85%;
         text-align: center;
+        font-size: 1.6rem;
+        color: var(--black);
+		
         padding: 160px 120px;
         box-sizing: border-box;
         max-height: 100vh;
         overflow-y: scroll;
-        font-size: 1.5rem;
+
+        /* background-color: var(--white); */
+        background: linear-gradient(90deg, var(--black) 50%, var(--white) 50%);
+		background-size: 200%;
+		background-position: 100%;
+        
+        animation: about-intro 2s var(--ease) 1;
+        
 	}
+
+    .exhibit::after{
+        background: linear-gradient(90deg, transparent, var(--orange), transparent);
+		animation: about-beam-intro 2s var(--ease) 1;
+    }
 
     .info > p {
         margin: 0;
@@ -71,5 +84,27 @@ const { frontmatter } = Astro.props
 
 	a.darkButton:hover {
 		box-shadow: inset 0px 0px 10px 12px #000000 !important;
+	}
+
+    @keyframes about-intro
+	{
+		from { background-position: 100%; }
+		to { background-position: 0%; }
+	}
+
+	@keyframes about-beam-intro
+	{
+		from { transform: translateX(25vw); }
+		to { transform: translateX(0vw); }
+	}
+
+    @media (max-width: 1050px)
+	{
+
+	}
+
+	@media (max-width: 580px)
+	{
+	
 	}
 </style>
