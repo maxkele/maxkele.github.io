@@ -2,6 +2,6 @@
 layout: '../layouts/Citations.astro'
 ---
 
-- (Accepted) *Keleher M.*, Westin, F., Nagabandi, P., Chiasson, S. (2022) How well do experts understand end-users' perceptions of manipulative patterns? NordiCHI 2022
+- How Well Do Experts Understand End-users' Perceptions of Manipulative Patterns? (2022) with Westin, F., Nagabandi, P., Chiasson, S.  NordiCHI 2022
 
-- *Keleher M.* Adaptive Colouring of Video Captions using a Fuzzy Expert System (2021) National Conference on Undergraduate Research 2021
+- Adaptive Colouring of Video Captions using a Fuzzy Expert System (2021) at National Conference on Undergraduate Research 2021
