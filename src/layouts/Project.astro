@@ -13,6 +13,7 @@ const { frontmatter } = Astro.props
 				<div class="wordmark"><HomeLogo/></div>
 
 				<slot/>
+
 				<!-- <a class="darkButton" href={frontmatter.file}>
 					See full project
 				</a> -->
@@ -30,9 +31,9 @@ const { frontmatter } = Astro.props
 
 <style>
 	.wordmark {
-		position: absolute;
-		top: 40px; 
-		left: 40px;
+		position: relative;
+		top: -120px; 
+		left: -320px;
 
 		font-weight: 100;
 		font-size: 2rem;
