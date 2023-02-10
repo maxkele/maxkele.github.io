@@ -1,5 +1,5 @@
 ---
-layout: '../layouts/Citations.astro'
+layout: '../layouts/Publications.astro'
 ---
 
 - How Well Do Experts Understand End-users' Perceptions of Manipulative Patterns? (2022) with Westin, F., Nagabandi, P., Chiasson, S.  NordiCHI 2022
